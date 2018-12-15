@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:MVVM="clr-namespace:TaskMan.ViewModels" Title="MVVM Task"
+             x:Class="TaskMan.Views.SamplePage">
+    <ContentPage.BindingContext>
+        <MVVM:SamplesViewModel/>
+    </ContentPage.BindingContext>
+
+    <ListView x:Name="list" ItemsSource="{Binding Samples}" HasUnevenRows="False" IsPullToRefreshEnabled="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ScrollView>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="LightGray" Margin="20">
+                            <Image Source="logo.png" Aspect="AspectFit" WidthRequest="50" HeightRequest="50"/>
+                            <Label Text="{Binding Title}" TextColor="Blue" FontSize="Medium"/>
+                            <Label Text="{Binding Body}" FontSize="Small"/>
+                        </StackLayout>
+                    </ScrollView>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
