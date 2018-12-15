@@ -15,7 +15,6 @@
                         <StackLayout Orientation="Horizontal" BackgroundColor="LightGray" Margin="20">
                             <Image Source="logo.png" Aspect="AspectFit" WidthRequest="50" HeightRequest="50"/>
                             <Label Text="{Binding Title}" TextColor="Blue" FontSize="Medium"/>
-                            <Label Text="{Binding Body}" FontSize="Small"/>
                         </StackLayout>
                     </ScrollView>
                 </ViewCell>
